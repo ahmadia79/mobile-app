@@ -1,0 +1,84 @@
+import { View, Text, Image, StyleSheet, TextInput } from 'react-native'
+import React from 'react'
+import { useUser } from '@clerk/clerk-expo'
+import Colors from '../../Utils/Colors';
+import { FontAwesome } from '@expo/vector-icons';
+
+export default function Header() {
+    const {user,isLoading}=useUser();
+  return user&&(
+    <View style={styles.container}>
+        <View style={styles.profileMainConatiner}>
+        <View style={styles.profileContainer}>
+            <Image source={{uri:user?.imageUrl}}
+            style={styles.userImage}/>
+            <View>
+                <Text style={{color:Colors.WHITE}}>Welcome,</Text>
+                <Text style={{color:Colors.WHITE,
+                fontSize:20}}>{user?.fullName}</Text>
+            </View>
+        </View>   
+    
+        <FontAwesome name="bookmark-o" size={27}
+         color="white" />
+        </View>
+        <View style={styles.searchBarContainer}>
+            <TextInput placeholder='Search'
+            style={styles.TextInput}/>
+            <FontAwesome name="search"
+            style={styles.searchbtn} size={24} color={Colors.PRIMARY} />
+            
+        </View>
+    </View>
+  )
+}
+const styles = StyleSheet.create({
+    container:{
+        padding:20,
+        paddingTop:40,
+        backgroundColor:Colors.PRIMARY,
+        borderBottomLeftRaduis:25,
+        borderBottomRightRaduis:25
+    },
+    profileMainConatiner:{
+        display:"flex",
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-between'
+        
+
+    },
+    profileConatiner:{
+        display:"flex",
+        flexDirection:'row',
+        alignItems:'center',
+        gap:10
+
+    },
+    TextInput:{
+        padding:7,
+        paddingHorizontal:16,
+        backgroundColor:Colors.WHITE,
+        borderRaduis:8,
+        width:'85%',
+        fontSize:16
+
+    },
+    searchBarContainer:{
+        marginTop:15,
+        display:'flex',
+        flexDirection:'row',
+        gap:10,
+        marginBottom:10
+    },
+    searchbtn:{
+        backgroundColor:Colors.WHITE,
+        padding:10,
+        borderRaduis:8
+    },
+    userImage:{
+        width:45,
+        heught:45,
+        borderRaduis:99
+    }
+})
