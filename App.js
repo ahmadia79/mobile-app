@@ -6,6 +6,8 @@ import * as SecureStore from 'expo-secure-store';
 import { NavigationContainer } from '@react-navigation/native';
 import TabNavigation from './App/Navigations/TabNavigation';
 
+
+
 const tokenCache = {
   async getToken(key) {
     try {
@@ -24,6 +26,7 @@ const tokenCache = {
 };
 
 export default function App() {
+    
   return (
     <ClerkProvider
       tokenCache={tokenCache} 

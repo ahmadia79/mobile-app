@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
         padding:20,
         paddingTop:40,
         backgroundColor:Colors.PRIMARY,
-        borderBottomLeftRaduis:25,
-        borderBottomRightRaduis:25
+        borderBottomLeftRadius:25,
+        borderBottomRightRadius:25
     },
     profileMainConatiner:{
         display:"flex",
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         padding:7,
         paddingHorizontal:16,
         backgroundColor:Colors.WHITE,
-        borderRaduis:8,
+        borderRadius:8,
         width:'85%',
         fontSize:16
 
@@ -74,11 +74,11 @@ const styles = StyleSheet.create({
     searchbtn:{
         backgroundColor:Colors.WHITE,
         padding:10,
-        borderRaduis:8
+        borderRadius:8
     },
     userImage:{
         width:45,
-        heught:45,
-        borderRaduis:99
+        height:45,
+        borderRadius:99
     }
 })
