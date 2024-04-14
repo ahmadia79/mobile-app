@@ -1,25 +1,18 @@
 import { View, Text, Image, StyleSheet, TextInput } from 'react-native'
 import React from 'react'
-import { useUser } from '@clerk/clerk-expo'
 import Colors from '../../Utils/Colors';
 import { FontAwesome } from '@expo/vector-icons';
 
-export default function Header() {
-    const {user,isLoading}=useUser();
+export default function Header(user) {
   return user&&(
     <View style={styles.container}>
         <View style={styles.profileMainConatiner}>
-        <View style={styles.profileContainer}>
-            <Image source={{uri:user?.imageUrl}}
-            style={styles.userImage}/>
             <View>
-                <Text style={{color:Colors.WHITE}}>Welcome,</Text>
-                <Text style={{color:Colors.WHITE,
-                fontSize:20}}>{user?.fullName}</Text>
-            </View>
+                <Text style={{color:Colors.WHITE, fontSize:25,marginTop:30}}>Home Page</Text>
+
         </View>   
     
-        <FontAwesome name="bookmark-o" size={27}
+        <FontAwesome name="bookmark-o" size={27} style={{marginTop:30}}
          color="white" />
         </View>
         <View style={styles.searchBarContainer}>
