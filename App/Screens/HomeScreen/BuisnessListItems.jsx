@@ -12,9 +12,11 @@ export default function BuisnessListItems({buisness}) {
       
       />
       <View style={styles.infoContainer}>
-        <Text style={{}}>{buisness?.name}</Text>
-        <Text style={{color:Colors.GRAY}}>{buisness?.contactPerson}</Text>
+        <Text style={{fontSize:17,fontFamily:'outfit'}}>{buisness?.name}</Text>
+        <Text style={{fontSize:13,fontFamily:'outfit',color:Colors.GRAY}}>{buisness?.contactPerson}</Text>
         <Text style={{
+          fontSize:10,
+          fontFamily:'outfit',
           padding:3,
           color:Colors.PRIMARY,
           backgroundColor:Colors.PRIMARY_LIGHT,

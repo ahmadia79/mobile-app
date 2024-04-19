@@ -16,10 +16,13 @@ const styles = StyleSheet.create({
         display:'flex',
         flexDirection:'row',
         alignItems:'center',
-        justifyContent:'space-between'
+        justifyContent:'space-between',
+        
 
     },
     heading:{
-      marginBottom:10
+      marginBottom:10,
+      fontSize:20,
+      fontFamily:'outfit'
     },
 });
