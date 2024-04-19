@@ -8,7 +8,7 @@ export default function Header(user) {
     <View style={styles.container}>
         <View style={styles.profileMainConatiner}>
             <View>
-                <Text style={{color:Colors.WHITE, fontSize:25,marginTop:30}}>Home Page</Text>
+                <Text style={{color:Colors.WHITE, fontSize:25,fontFamily:'outfit-bold',marginTop:30}}>Home Page</Text>
 
         </View>   
     

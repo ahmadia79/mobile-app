@@ -7,8 +7,14 @@ import TabNavigation from './App/Navigations/TabNavigation';
 import Navigator from './App/Navigations/Navigator';
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './firebase';  // Ensure this path points to your Firebase configuration
+import { useFonts } from 'expo-font';
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    'outfit': require('./assets/fonts/Outfit-Regular.ttf'),
+    'outfit-medium': require('./assets/fonts/Outfit-Medium.ttf'),
+    'outfit-bold': require('./assets/fonts/Outfit-Bold.ttf'),
+  });
   const [user, setUser] = useState(null);
   const auth = getAuth(); // Initialize Firebase Auth
 
